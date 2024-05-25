@@ -1,0 +1,74 @@
+###
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "name": "Farinloye Jonathan",
+  "email": "watch3rr@duck.com",
+  "password": "SomeStrugg1"
+}
+
+###
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "watch3rr@duck.com",
+  "password": "SomeStrugg1"
+}
+
+###
+GET http://localhost:8080/restricted
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+
+###
+GET http://localhost:8080/groups/
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+
+###
+GET http://localhost:8080/groups/search?query=samp
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+###
+POST http://localhost:8080/groups/
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "name": "The Samplers",
+  "description": "We go to the ends of the earth"
+}
+
+###
+POST http://localhost:8080/data-set/upload
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "name": "Wasabi Data"
+}
+
+###
+GET http://localhost:8080/data-set/1
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+
+###
+PATCH http://localhost:8080/data-set/1
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "name": "The Samplers Dataset"
+}
+
+###
+DELETE http://localhost:8080/data-set/1
+Content-Type: application/json
+Authorization: Bearer {{access}}

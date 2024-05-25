@@ -1,0 +1,11 @@
+services:
+  backend:
+    command:
+      - python
+      - main.py
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
